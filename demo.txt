@@ -1,0 +1,7 @@
+QUESTION: MERGE STRINGS ALTERNATELY
+=>string str(s, ' '); // Initialize str with s spaces,
+The line string str(s, ' '); initializes a string str with a length of s and fills it with space characters (' '). This is necessary because, in the ans function, you are assigning values to specific indices of the str string, and without proper initialization, you might encounter undefined behavior or garbage values.
+
+In C++, when you create a string using the constructor string(size_t n, char c), it creates a string of length n and fills it with the character c. In this case, it ensures that str has the correct length s and initializes it with spaces.
+
+If you don't initialize str with spaces, you would be attempting to write to specific indices of the string without guaranteeing that those indices have valid initial values. Initializing with spaces ensures that all positions in the string are set to a known and safe value before you start assigning values to specific indices in your loop.
